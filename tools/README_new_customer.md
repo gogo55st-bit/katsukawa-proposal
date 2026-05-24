@@ -1,10 +1,6 @@
 # 別のお客様用ページ作成手順
 
-## 方針
-
-お客様ごとにGitHubリポジトリを分けます。
-
-例：
+別のお客様が来たときは、お客様ごとにGitHubリポジトリを分けます。
 
 ```text
 katsukawa-proposal
@@ -12,60 +8,34 @@ tanaka-proposal
 suzuki-proposal
 ```
 
-URL例：
+## 手順
+
+1. GitHubで新しいリポジトリを作成する
+2. `template/` を参考に初期構成を作る
+3. お客様名、タイトル、提案内容、必要ファイルを差し替える
+4. 画像やPDFは必要な場合だけ追加する
+5. エリアMAPは必須にしない
+6. 物件PDFを掲載する場合は、元PDFを直接公開せず、加工済みPDFだけを使う
+7. GitHub Pagesを有効化する
+8. 正式URLを確認する
+9. `tools/push_update.bat` のパスとURLを新顧客用に変更する
+10. READMEを新顧客名に合わせて変更する
+
+URL例:
 
 ```text
 https://gogo55st-bit.github.io/tanaka-proposal/
 ```
 
-## 手順
+## PDF掲載時の注意
 
-1. GitHubで新しいリポジトリを作成する
-   - 例：`tanaka-proposal`
-   - Publicで作成する
+元PDFは `originals/` に保存し、Git管理しないようにします。
+お客様共有用PDFは、下部帯など隠したい情報を加工したうえで `public_pdfs/` または `assets/pdfs/` に保存します。
 
-2. `katsukawa-proposal` を参考に初期構成を作る
-   - `index.html`
-   - `README.md`
-   - `tools/push_update.bat`
-   - 必要に応じて `assets/`
+公開前に必ず加工後PDFを確認してください。
+REINS由来で外部共有不可の情報や、広告不可物件の詳細資料は掲載しないでください。
 
-3. お客様名、タイトル、提案内容、必要ファイルを差し替える
+## 任意資料の考え方
 
-4. 画像やPDFは必要な場合だけ追加する
-   - エリアMAPは必須ではない
-   - 物件PDFは必須ではない
-   - テキスト提案のみでも成立させる
-
-5. GitHub Pagesを有効化する
-   - Source：`main`
-   - Folder：`/root`
-
-6. 正式URLを確認する
-
-```text
-https://gogo55st-bit.github.io/リポジトリ名/
-```
-
-7. `tools/push_update.bat` のパスとURLを新顧客用に変更する
-
-8. `README.md` を新顧客名に合わせて変更する
-
-## 新顧客用 `push_update.bat` で変更する箇所
-
-```bat
-cd /d "C:\Users\user\Documents\GO_AI_COMPANY_OBSIDIAN\01_Projects\物件GO\GitHubPages\新リポジトリ名"
-```
-
-表示するURL：
-
-```text
-https://gogo55st-bit.github.io/新リポジトリ名/
-```
-
-## 注意事項
-
-- 既存の勝川さんページを別顧客用に直接上書きしない
-- REINS由来で外部共有不可の資料は公開しない
-- ページ公開前にスマホ表示を確認する
-- URLをお客様に送る前に、必ずGitHub Pagesで200応答を確認する
+エリアMAP、物件PDF、画像資料、補足資料はすべて任意です。
+テキスト提案だけでも成立する構成にしてください。
