@@ -19,11 +19,12 @@ v2を作るときも、公開URLは変えず、リポジトリ直下の `index.h
 4. 物件PDFを掲載する場合は、元PDFを `originals/` に入れる
 5. `tools/mask_pdf_bottom.bat` を実行し、下部帯を隠したPDFを作成する
 6. `review_previews/` と加工済みPDFを開き、隠したい情報が残っていないか必ず確認する
-7. 新しい `index.html` や必要ファイルをルートに配置する
-8. ローカルで表示確認する
-9. `tools/push_update.bat` を実行する
-10. 正式URLで反映確認する
-11. LINE送信用文面を作る
+7. 複数PDFを掲載する場合は、`tools/README_multiple_pdfs.md` の形で `index.html` に追加する
+8. 新しい `index.html` や必要ファイルをルートに配置する
+9. ローカルで表示確認する
+10. `tools/push_update.bat` を実行する
+11. 正式URLで反映確認する
+12. LINE送信用文面を作る
 
 ## PDF掲載時の注意
 
@@ -31,7 +32,8 @@ v2を作るときも、公開URLは変えず、リポジトリ直下の `index.h
 `originals/` はGit管理しないため、GitHub Pagesには公開しません。
 
 お客様共有用には、必ず加工済みPDFだけを使ってください。
-加工済みPDFは `public_pdfs/` または `assets/pdfs/` に保存します。
+加工済みPDFは `public_pdfs/` に保存します。
+提案ページからリンクする場合も、必ず `./public_pdfs/...` を使ってください。
 
 公開前に必ず加工後PDFを確認してください。
 

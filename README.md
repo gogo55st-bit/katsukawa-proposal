@@ -22,7 +22,7 @@ C:\Users\user\Documents\GO_AI_COMPANY_OBSIDIAN\01_Projects\物件GO\GitHubPages\
 
 ## 通常の更新手順
 
-1. `index.html`、`styles.css`、`assets/` 内の画像やPDFを必要に応じて差し替える
+1. `index.html`、`styles.css`、画像、加工済みPDFを必要に応じて差し替える
 2. ローカルでページを開いて内容確認する
 3. `tools\push_update.bat` を実行する
 4. 数分後、正式URLで反映を確認する
@@ -62,7 +62,7 @@ public_pdfs/
   下部帯を隠した、お客様共有用PDFの出力先。
 
 assets/pdfs/
-  既存ページでPDFを掲載する場合の公開用PDF置き場。
+  元PDFを置かない。現在の運用ではPDF掲載に使わない。
 
 review_previews/
   加工前後の確認用PNG。Git管理しない。GitHub Pagesに公開しない。
@@ -72,10 +72,30 @@ review_previews/
 
 1. 元PDFを `originals/` に入れる
 2. `tools/mask_pdf_bottom.bat` を実行する
-3. `public_pdfs/` と `assets/pdfs/` に加工済みPDFが生成される
+3. `public_pdfs/` に加工済みPDFが生成される
 4. `review_previews/` で加工前後のPNGを確認する
 5. 加工済みPDFを開き、下部に隠したい情報が残っていないか必ず目視確認する
 6. 問題なければ提案ページに掲載し、`tools/push_update.bat` で公開する
+
+### 複数PDF掲載
+
+複数の加工済みPDFを掲載する場合は、`tools/README_multiple_pdfs.md` を確認してください。
+`index.html` の「共有PDF資料」欄に、PDFごとのタイトル、コメント、「PDFを見る」ボタンを追加します。
+PDFが0枚、1枚、複数枚のどの状態でも成立します。
+
+公開ページに掲載するPDFリンクは必ず `./public_pdfs/...` にしてください。
+元PDFや `originals/` 内のファイルへ直接リンクしないでください。
+
+### 公開前チェックリスト
+
+- [ ] 元PDFは `originals/` に保存している
+- [ ] 元PDFをGit管理していない
+- [ ] `tools/mask_pdf_bottom.bat` で加工済みPDFを作成した
+- [ ] `review_previews/` で加工前後を確認した
+- [ ] `public_pdfs/` の加工済みPDFを開いて目視確認した
+- [ ] 下部帯に隠したい情報が残っていない
+- [ ] `index.html` のPDFリンクが `./public_pdfs/...` だけになっている
+- [ ] PDFごとにタイトルとコメントを付けている
 
 ### 重要
 

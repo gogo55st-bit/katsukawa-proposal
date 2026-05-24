@@ -1,16 +1,7 @@
-# PDF配置場所
+# assets/pdfs
 
-REINSから図面PDFを取得したら、このフォルダに置く。
+このフォルダには元PDFを置きません。
 
-想定ファイル名:
+お客様に共有するPDFは、必ず `originals/` に置いた元PDFを `tools/mask_pdf_bottom.bat` で加工し、`public_pdfs/` に出力されたPDFだけを掲載してください。
 
-- `debera-heights.pdf`：未取得
-- `saint-heights-b.pdf`：取得済み
-- `first-stage-shinohara.pdf`：取得済み
-- `daini-rose-heights.pdf`：取得済み
-- `arcadia-i.pdf`：取得済み
-- `court-house-fujigaoka.pdf`：取得済み
-- `cresta-kamoi.pdf`：取得済み
-- `granview-life-shinyokohama.pdf`：未取得
-
-ファイルを置くと、`index.html` の物件カード内でPDFプレビューされる。
+現在の運用では、提案ページからPDFへリンクする場合も `./public_pdfs/...` を使います。

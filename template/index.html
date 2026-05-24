@@ -102,6 +102,48 @@
         color: var(--muted);
       }
 
+      .pdf-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .pdf-empty {
+        margin: 0;
+        padding: 16px;
+        border: 1px dashed var(--line);
+        border-radius: 8px;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .pdf-card {
+        display: grid;
+        gap: 12px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #ffffff;
+      }
+
+      .pdf-card p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .pdf-button {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        justify-self: start;
+        padding: 0 16px;
+        border-radius: 8px;
+        background: var(--accent);
+        color: #ffffff;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
       .footer {
         background: #203236;
         color: #d9e5e2;
@@ -121,6 +163,11 @@
 
         .asset-list {
           grid-template-columns: repeat(2, 1fr);
+        }
+
+        .pdf-card {
+          grid-template-columns: minmax(0, 1fr) auto;
+          align-items: center;
         }
       }
     </style>
@@ -158,6 +205,24 @@
             <h3>LINE共有</h3>
             <p>公開URLと短い説明文をLINEで送れる形に整えます。</p>
           </article>
+        </div>
+      </section>
+
+      <section class="note">
+        <h2>共有PDF資料</h2>
+        <div class="pdf-list">
+          <p class="pdf-empty">現在、共有用PDFは掲載していません。</p>
+
+          <!--
+          PDFを掲載する場合は、public_pdfs/ の加工済みPDFだけを指定します。
+          <article class="pdf-card">
+            <div>
+              <h3>物件資料タイトル</h3>
+              <p>お客様に伝えたい補足コメントを入れます。</p>
+            </div>
+            <a class="pdf-button" href="./public_pdfs/加工済みPDF名.pdf" target="_blank" rel="noopener">PDFを見る</a>
+          </article>
+          -->
         </div>
       </section>
 
