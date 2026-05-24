@@ -30,12 +30,7 @@ katsukawa-proposal/
 ├─ assets/
 │  ├─ area-map.svg
 │  └─ pdfs/
-├─ archive/
-│  └─ v1/
-├─ template/
 └─ tools/
-   ├─ README_v2_workflow.md
-   ├─ README_new_customer.md
    └─ push_update.bat
 ```
 
@@ -59,36 +54,6 @@ C:\Users\user\Documents\GO_AI_COMPANY_OBSIDIAN\01_Projects\物件GO\GitHubPages_
 ```text
 https://gogo55st-bit.github.io/katsukawa-proposal/
 ```
-
-## v2や別顧客ページの考え方
-
-勝川さんv2を作る場合は、まず `tools/README_v2_workflow.md` を確認してください。
-
-別のお客様用ページを作る場合は、`tools/README_new_customer.md` を確認してください。
-
-お客様ごとにリポジトリを分ける方針です。
-
-```text
-katsukawa-proposal
-tanaka-proposal
-suzuki-proposal
-```
-
-## 画像・PDFの扱い
-
-エリアMAP、物件PDF、物件画像、補足資料はすべて任意です。
-
-案件によって、以下のどの形でも進められるようにします。
-
-```text
-・エリアMAPあり
-・物件PDFのみ
-・テキスト提案のみ
-・画像なし
-・PDFなし
-```
-
-テンプレートは `template/` に置いてあります。画像・PDFなしでも成立する最小構成です。
 
 ## 手動でpushする場合
 
