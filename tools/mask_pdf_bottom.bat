@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\Users\user\Documents\GO_AI_COMPANY_OBSIDIAN\01_Projects\物件GO\GitHubPages\katsukawa-proposal"
+cd /d "%~dp0.."
 
 set PYTHON_EXE=C:\Users\user\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
 if not exist "%PYTHON_EXE%" set PYTHON_EXE=python

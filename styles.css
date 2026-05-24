@@ -315,6 +315,17 @@ ul {
   color: #ffffff;
 }
 
+.pdf-box .pdf-button--box {
+  display: grid;
+  width: calc(100% - 32px);
+  min-height: 188px;
+  margin: 16px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #ffffff;
+}
+
 .footer {
   background: #203236;
   color: #d9e5e2;

@@ -43,8 +43,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--mask-ratio",
         type=float,
-        default=0.13,
-        help="Bottom page height ratio to white-mask. Default: 0.13.",
+        default=0.25,
+        help="Bottom page height ratio to white-mask. Default: 0.25.",
     )
     parser.add_argument(
         "--scale",
@@ -114,7 +114,9 @@ def list_inputs(input_pdf: Path | None) -> list[Path]:
         return [input_pdf]
     if not ORIGINALS_DIR.exists():
         return []
-    return sorted(ORIGINALS_DIR.glob("*.pdf")) + sorted(ORIGINALS_DIR.glob("*.PDF"))
+    pdfs = {path.resolve(): path for path in ORIGINALS_DIR.glob("*.pdf")}
+    pdfs.update({path.resolve(): path for path in ORIGINALS_DIR.glob("*.PDF")})
+    return sorted(pdfs.values())
 
 
 def main() -> int:
